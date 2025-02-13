@@ -1,0 +1,53 @@
+/* Q1 */
+div{
+    width: 500px;
+    padding: 20px;
+    margin: 10px;
+    color: whit;
+    background-color: blueviolet;
+    background-color: rgb(136, 34, 232);
+    background-color: #8a2be2;
+    background-color: hsl(271, 76%, 53%);
+}
+.assign-1-shape-2{
+    background-color: hsl(271, 76%, 53%,50%);
+
+}
+.assign-1-shape-3{
+    background-color: hsl(271, 76%, 53%,0.1);
+
+}
+
+/* Q2 */
+.assign-2-shape-1{
+
+    width: 400px;
+    height: 400px;
+    background-image: url(../../../IMG/css-assignment-5-8.png);
+    background-repeat: no-repeat;
+
+}
+.assign-2-shape-2{
+    
+        width: 400px;
+        height: 400px;
+        background-image: url(../../../IMG/css-assignment-5-8.png);
+        background-repeat: repeat-y;
+    
+    }
+.assign-2-shape-3{
+        
+            width: 400px;
+            height: 400px;
+            background-image: url(../../../IMG/css-assignment-5-8.png);
+            background-repeat: repeat-x;
+        
+        }
+.assign-2-shape-4{
+            
+                width: 400px;
+                height: 400px;
+                background-image: url(../../../IMG/css-assignment-5-8.png);
+                background-repeat: repeat;
+            
+}
