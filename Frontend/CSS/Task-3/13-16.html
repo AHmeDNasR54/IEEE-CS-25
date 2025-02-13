@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+
+    <style>
+      .parent .child .title {
+        color: red;
+      }
+      .parent .title {
+        color: blue;
+      }
+      div p,
+      div.title {
+        color: green;
+        background-color: white;
+      }
+      /* 02 */
+      p {
+        color: rgb(249, 232, 232);
+        width: fit-content;
+        max-width: 400px;
+        height: 20px;
+        background-color: brown;
+        padding: 20px;
+        overflow: hidden;
+        display: block;
+      }
+      .shadow {
+        text-transform: capitalize;
+        color: black;
+        text-shadow: 1px 1px 0px red, 2px 3px 0 blue, 3px 3px 0 blueviolet;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      div p {
+        font-size: 30px;
+        display: block;
+        text-align: center; /* it doesn't wprk,i don't know what is the reason?!!*/
+      }
+      div p.one {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      div p.two {
+        text-transform: capitalize;
+      }
+      div p.three {
+        text-transform: lowercase;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Q1 -->
+    <div class="parent">
+      <div class="child">This Is Child <span class="title">Title</span></div>
+      <span class="title">Child Title</span>
+      <p>Paragraph Content</p>
+    </div>
+    <div class="title">Section Title</div>
+    <br /><br /><br />
+    <!-- 02 -->
+    <hr />
+    <br /><br />
+    <p class="one">Title One</p>
+    <p class="two">Title Two With More Words</p>
+    <p class="one">Title Three With Many Many Many Words</p>
+    <p class="one">
+      Title Three With Many Many Many Many Many Many Words Title Three With Many
+      Many Many Many Many Many Words Title Three With Many Many Many Many Many
+      Many Words
+    </p>
+    <hr />
+  </body>
+</html>
