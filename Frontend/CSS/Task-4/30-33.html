@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .color div {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .red {
+        background-color: red;
+        top: 350px;
+        margin-left: 40px;
+        z-index: 3;
+      }
+      .green {
+        background-color: green;
+        top: 320px;
+        margin-left: 30px;
+        z-index: 2;
+      }
+      .black {
+        background-color: black;
+        top: 320px;
+        left: 20px;
+        z-index: -1;
+      }
+      .blue {
+        background-color: blue;
+        top: 300px;
+        left: 20px;
+      }
+
+      .task02 {
+        margin-top: 300px;
+        margin-left: 100px;
+      }
+      .task02 {
+        width: 300px;
+        padding: 30px;
+        margin: 30px auto;
+        background-color: #eee;
+        border-top: 3px solid red;
+        border-bottom: 3px solid red;
+        border-right: 3px solid rgb(33, 150, 243);
+        border-left: 3px solid rgb(33, 150, 243);
+        position: relative;
+      }
+      .top-left {
+        margin-right: 10px;
+        background-color: rgb(33, 150, 243);
+        border-right: 3px solid red;
+        border-bottom: 3px solid rgb(33, 150, 243);
+        color: white;
+        padding: 8px;
+        display: inline-block;
+        position: absolute;
+
+        left: -22px;
+        top: -18px;
+        width: 22px;
+        text-align: center;
+      }
+      .top-right {
+        margin-left: 10px;
+        background-color: rgb(33, 150, 243);
+        border-left: 3px solid red;
+        border-bottom: 3px solid rgb(33, 150, 243);
+        color: white;
+        padding: 8px;
+        display: inline-block;
+        position: absolute;
+
+        right: -22px;
+        top: -18px;
+        width: 22px;
+        text-align: center;
+      }
+      .bottom-left {
+        margin-right: 10px;
+        background-color: rgb(33, 150, 243);
+        border-right: 3px solid red;
+        border-top: 3px solid rgb(33, 150, 243);
+        color: white;
+        padding: 8px;
+        display: inline-block;
+        position: absolute;
+
+        left: -22px;
+        bottom: -18px;
+        width: 22px;
+        text-align: center;
+      }
+      .bottom-right {
+        margin-left: 10px;
+        background-color: rgb(33, 150, 243);
+        border-left: 3px solid red;
+        border-top: 3px solid rgb(33, 150, 243);
+        color: white;
+        padding: 8px;
+        display: inline-block;
+        position: absolute;
+
+        right: -22px;
+        bottom: -18px;
+        width: 22px;
+        text-align: center;
+      }
+
+      /*  */
+      table{
+    width: 70%;
+    margin: 0 15%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-spacing: 5px;
+    background-color: #999799;
+    color: white;
+    border-collapse: collapse;/* to prevent double borders*/
+}
+table th{
+    border: 2px solid rgb(88, 91, 90);
+    /* margin-left:50px; */
+    background-color: #363038;
+}
+table td{
+    border: 2px solid rgb(110, 110, 110);
+    /* padding: 30px; */
+    /* margin:50px; */
+    text-align: center;
+    /* display: inline-block; */
+   
+}
+
+img{
+    width: 100px;
+    height: 20pxs;
+}
+table tbody td {
+    width: fit-content;
+
+}
+.tamer{
+    td.colspan{
+        column-span:initials;
+    }
+}
+.View,.Delete{
+    display: inline-block;
+    width: 40px;
+    padding: 7px;
+    margin: auto;
+    color: white;
+}
+.View{
+    background-color: rgb(33, 150, 243);
+}
+.Delete{
+    background-color: #e92064;
+}
+.img{
+    width: 50px;
+}
+td:hover {background-color: coral;}
+.cap{
+    width: fit-content;
+    color: black;
+    margin: auto;
+    background-color: yellow;
+    h2{
+        text-align: center;
+        background-color: yellow;
+    } 
+}
+body{
+    height: 1000px;
+}
+    </style>
+  </head>
+
+  <body>
+    <!--  Q1 -->
+    <div class="color">
+      <div class="green"></div>
+      <div class="red"></div>
+      <div class="blue"></div>
+      <div class="black"></div>
+    </div>
+
+      <!--  Q2 -->
+      <div class="task02">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, sed. Ea
+        ipsum similique quasi rem, fugiat voluptatibus reiciendis nam debitis
+        earum quo veniam laudantium mollitia atque! Laborum ea nam doloribus.
+        <span class="top-left">1</span>
+        <span class="bottom-left">2</span>
+        <span class="top-right">3</span>
+        <span class="bottom-right">4</span>
+      </div>
+      <!--  Q4 -->
+      <table>
+        <caption class="cap"><h2>هننزل ولا لا</h2></caption>
+
+        <thead >
+            <th>Avatar</th>
+            <th>Group</th>
+            <th>Name</th>
+            <th>Points</th>
+            <th>Control</th>
+        </thead>
+        <tbody>
+            <tr class="nasr ">
+                <td class="img"><img src="photos/nasr.jfif" ></td>
+                <td>Ninja</td>
+                <td>Ahmed Nasr</td>
+                <td>120</td>
+                <td>
+                    <div class="View">View</div>
+                    <div class="Delete">Delete</div>
+                </td>
+            </tr>
+            <tr class="yasser">
+                <td class="img"><img src="photos/yasser.jpg"></td>
+                <td rowspan="2">Shades</td>
+                <td>Ahmed Yasser</td>
+                <td>180</td>
+                <td >
+                    <div class="View">View</div>
+                    <div class="Delete">Delete</div>
+                </td>
+            </tr>
+            <tr class="tamer">
+                <td class="img"><img src="photos/tamer.jpg"></td>
+                <!-- <td>Ninja</td> -->
+                <td>Eslam ELsayed</td>
+                <td>160</td>
+                <td>
+                    <div class="View">View</div>
+                    <div class="Delete">Delete</div>
+                </td>
+            </tr>
+            <tr class="dotsy">
+                <td class="img"><img src="photos/dotsy.jpg" alt=""></td>
+                <td rowspan="2">Valhala</td>
+                <td>Dotsy</td>
+                <td>190</td>
+                <td >
+                    <div class="View">View</div>
+                    <div class="Delete">Delete</div>
+                </td>
+            </tr>
+            <tr class="num1">
+                <td class="img"><img src="photos/num1.jpg" alt=""></td>
+                <!-- <td></td> -->
+                <td>ElDahar</td>
+                <td>110</td>
+                <td>
+                    <div class="View">View</div>
+                    <div class="Delete">Delete</div>
+                </td>
+            </tr>
+            <tr class="usama">
+                <td class="img"><img src="photos/usama.jpg" alt="" width="200px"></td>
+                <td>Union</td>
+                <td>Usama Mohamed</td>
+                <td>90</td>
+                <td >
+                        <div class="View">View</div>
+                        <div class="Delete">Delete</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+  </body>
+</html>
