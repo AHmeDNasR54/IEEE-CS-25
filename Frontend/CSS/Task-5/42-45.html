@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="01.css" />
+
+    <style>
+      .task01 {
+        margin-top: 40px;
+        width: 500px;
+        padding: 50px;
+        background-color: #f2eef4;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+        text-transform: capitalize;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      .task01 div {
+        padding: 20px;
+        margin: 10px auto;
+        background-color: #dededd;
+        transition-duration: 500ms;
+        transition-delay: 0.5s;
+      }
+      .task01:hover {
+        margin-top: 10px;
+      }
+      .task01 div:hover {
+        margin-top: 40px;
+      }
+
+      /* Task 3 */
+      /* :root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+  } */
+
+      .task03 div {
+        width: 400px;
+        padding: var(--mainPadding, 10px);
+        color: var(--mainColor, red);
+        border: 3px solid var(--mainColor, black);
+        /* margin: 10px auto; */
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="task01">
+      Will go up on hover in half second
+      <div class="child">will go down after half second</div>
+    </div>
+    <hr />
+    <br />
+    <br />
+    <hr />
+    <br />
+
+    <div class="task03">
+      <div>Element</div>
+      <div>Element</div>
+      <div>Element</div>
+    </div>
+  </body>
+</html>
