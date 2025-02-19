@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex box tasks</title>
+    <link rel="stylesheet" href="02.css" />
+
+    <style>
+      .task01 div {
+        width: 100px;
+        height: 100px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #ff5722;
+        background-color: #eee;
+        /* outline: 3px solid #ff5722; */
+        border-radius: 50%;
+        padding: 10px;
+        margin: 10px auto;
+
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+
+        position: relative;
+        box-shadow: 12px -1px 0px -1px #ff5722, -12px -1px 0px -1px #02a7f3;
+      }
+      .task01 div::after {
+        content: "";
+        position: absolute;
+        top: 0;
+      }
+
+      /* Task 5 */
+
+      .parent-5 {
+        width: 600px;
+        height: 300px;
+        padding: 20px;
+        margin: 20px auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        background-color: #eee;
+        color: white;
+      }
+      .parent-5 div {
+        display: flex;
+        /* height: calc(80% /2); */
+        width: calc(100% / 2);
+        justify-content: center;
+        align-items: center;
+      }
+      .parent-5 div.one {
+        height: calc(50%);
+        width: calc(70% / 4);
+        align-self: flex-start;
+        order: 2;
+        background-color: #ff9800;
+      }
+      .parent-5 div.two {
+        height: calc(50%);
+        width: calc(70% / 4);
+        align-self: flex-end;
+        order: 3;
+        background-color: #8bc34a;
+      }
+      .parent-5 div.three {
+        height: calc(50%);
+        width: calc(70% / 4);
+        align-self: flex-start;
+        order: 4;
+        background-color: #795548;
+      }
+      .parent-5 div.four {
+        height: calc(50%);
+        width: calc(70% / 4);
+        align-self: flex-end;
+        order: -1;
+        background-color: #673ab7;
+      }
+
+      /* Task 6 */
+      .page {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 90%;
+        height: 550px;
+        background-color: #eee;
+        padding: 20px;
+        margin: 20px auto;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+      }
+      header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        height: 50px;
+      }
+      .logo {
+        height: calc(30%);
+        width: calc(90% / 10);
+        background-color: #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+      }
+      .navigation {
+        width: calc((90% / 10) * 9);
+        height: calc(30%);
+        background-color: #ddd;
+        padding: 10px;
+      }
+      .links {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-flow: row wrap;
+
+        justify-content: space-between;
+        /* justify-content: end; */
+        /* align-items: start; */
+        /* a{    text-decoration: none;
+    } */
+      }
+      ul {
+        list-style: none;
+      }
+
+      main {
+        background-color: #eee;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        height: 300px;
+        align-items: start;
+      }
+      main article,
+      main aside {
+        /* width: 49%; */
+        background-color: #ddd;
+        height: 100%;
+        display: flex;
+        padding: 2px;
+
+        /* flex-flow: column nowrap; */
+        /* justify-content:  */
+        /* align-content: space-between; */
+        /* align-items: center; */
+      }
+      article {
+        width: 68%;
+      }
+      aside {
+        width: 30%;
+      }
+
+      footer {
+        background-color: #ddd;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        padding: 10px;
+        /* margin-bottom: -20px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="task01">
+      <div>Elzero</div>
+    </div>
+    <br />
+    <hr />
+    <br />
+
+    <div class="parent-5">
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+      <div class="four">4</div>
+    </div>
+
+    <hr />
+    <br />
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Semantic HTML5 Example</title>
+      </head>
+      <body>
+        <div class="page">
+          <header class="header">
+            <div class="logo">Logo</div>
+            <nav class="navigation">
+              <ul class="links">
+                <li><!--<a href="#home">-->Home</li>
+                <li><!--<a href="#home">-->About</li>
+                <li><!--<a href="#home">-->Services</li>
+                <li><!--<a href="#home">-->Contact</li>
+              </ul>
+            </nav>
+          </header>
+          <main class="main-area">
+            <article class="content">Content</article>
+            <aside class="sidebar">Sidebar</aside>
+          </main>
+          <footer class="footer">
+            <div class="copyright">Copyright 2021</div>
+            <div class="design">Designed By Ahmed Nasr</div>
+          </footer>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>
