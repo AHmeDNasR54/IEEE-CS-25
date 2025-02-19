@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   <style>
+.task03 p{
+    background-color: #eee;
+    padding: 15px;
+    margin: 15px auto;
+    width: 500px;
+    position: relative;
+    display: block;
+    border-left:5px solid #e81d62 ;
+
+}
+.task03 p::before{
+  
+  content: attr(data-person);
+  left: -90px;
+  position: absolute;
+  background-color: #eee;
+  padding: 10px;
+  margin-top: -10px;
+  height: inherit;
+    /* content: "";
+    width: 5px;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #e81d62; */
+
+
+}
+.task03 p::after{
+    content: "";
+    position: absolute;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent #e81d62 transparent transparent;/* transparent is to disappear the color:=> the page 's default color is transparwnt(شفاف)*/
+    top:50% ;
+    left: -28px;
+    width: 0;
+    height: 0;
+    margin-top: -14px;
+}
+/*p::after::before  there is only one before and one after for an element,
+so this code is wrong
+{
+    content: attr(data-person);
+    position: absolute;
+    width: 100px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #eee;
+    top: 50%;
+    left: -40px;
+
+}*/
+.task04 p{
+    position: relative;
+    background-color: #eee;
+    width: 500px;
+    padding: 20px;
+    margin: 22px auto;
+    counter-increment: counting;
+}
+.task04 p::before{
+    content: counter(counting);
+    position: absolute;
+    background-color: #f44336;
+    color: white;
+    width: 50px;
+    height: 70%;
+    text-align: center;
+    font-weight: bold;
+    left: -50px;
+    top:0 ;
+    padding-top: 20px;
+    
+}
+.task04 p::after{
+    content: "";
+    position: absolute;
+    background-color: #f44336;
+    width: 5px;
+    height: 100%;
+    right:0px;
+    top:0;
+    
+}
+
+   </style>
+  </head>
+
+  <body>
+    <!--  Q3 -->
+    <div class="task03">
+      <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+      <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+      <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+  </div>
+
+     
+      <!--  Q4 -->
+      <div class="task04">
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        </div>
+    </div>
+  </body>
+</html>
