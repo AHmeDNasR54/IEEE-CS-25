@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      :root {
+        --bg-color: #009688;
+        --txt-color: #fff;
+      }
+      h1 {
+        width: 150px;
+        margin: 50px auto;
+        background-color: var(--bg-color);
+        color: var(--txt-color);
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        transform: ;
+      }
+      h1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -168px;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 1;
+        transform: skewX(18deg);
+      }
+      h1::after {
+        content: "";
+        position: absolute;
+        background-color: var(--bg-color);
+        width: 17px;
+        top: 0;
+        left: 0px;
+        transform: skewX(17deg);
+        z-index: 1;
+        height: 100%;
+      }
+      .task5-1 {
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        line-height: 5.5;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+      }
+      .task5-1::before {
+        content: "Front";
+        width: 200px;
+        height: 200px;
+        background-color: #fa3664;
+        font-size: 35px;
+        color: #fff;
+        backface-visibility: hidden;
+        z-index: 1;
+      }
+      .task5-1::after {
+        content: "Back";
+        width: 200px;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: #fff;
+        font-size: 35px;
+        z-index: -1;
+        background-color: #00a3cc;
+        position: absolute;
+        top: 0;
+        transform: rotateY(-180deg);
+      }
+      .task5-1:hover {
+        transform: rotateY(-180deg);
+      }
+      .task5-2 {
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        line-height: 5.5;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+      }
+      .task5-2::before {
+        content: "Front";
+        width: 200px;
+        height: 200px;
+        background-color: #fa3664;
+        font-size: 35px;
+        color: #fff;
+        backface-visibility: hidden;
+        z-index: 1;
+      }
+      .task5-2::after {
+        content: "Back";
+        width: 200px;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: #fff;
+        font-size: 35px;
+        z-index: -1;
+        background-color: #00a3cc;
+        position: absolute;
+        top: 0;
+        transform: rotateX(-180deg);
+      }
+      .task5-2:hover {
+        transform: rotateX(-180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Q2 -->
+    <h1>Elzero</h1>
+    <!-- Q5 -1 -->
+    <div class="task5-1"></div>
+    <!-- Q5 -2 -->
+    <div class="task5-2"></div>
+  </body>
+</html>
