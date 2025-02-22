@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex box tasks</title>
+    <link rel="stylesheet" href="02.css" />
+
+    <style>
+      /* Task 2 */
+      .layout {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 800px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: 50px auto 50px;
+        grid-template-areas:
+          "head head head head head head head head head head "
+          "section section section section section section section aside aside aside "
+          "footer footer footer footer footer footer footer footer footer footer ";
+      }
+      header {
+        background-color: #03a9f4;
+
+        grid-area: head;
+        position: relative;
+      }
+      header::before {
+        content: "Header";
+        position: absolute;
+        color: white;
+        left: 12px;
+        bottom: 20px;
+      }
+      section {
+        background-color: #ff5722;
+        grid-area: section;
+        position: relative;
+      }
+      section::before {
+        content: "Section";
+        position: absolute;
+        color: white;
+        left: 12px;
+        top: 10px;
+      }
+      aside {
+        background-color: #607d8b;
+        grid-area: aside;
+        position: relative;
+      }
+      aside::before {
+        content: "Aside";
+        position: absolute;
+        color: white;
+        left: 12px;
+        top: 20px;
+      }
+      footer {
+        background-color: #009688;
+        grid-area: footer;
+        position: relative;
+      }
+      footer::before {
+        content: "Footer";
+        position: absolute;
+        color: white;
+        left: 12px;
+        bottom: 20px;
+      }
+
+      /*  Task 4*/
+      .grid2 {
+        background-color: #ddd;
+        padding: 20px;
+        width: 800px;
+        height: 400px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-areas:
+          "eight eight eight"
+          " two two three"
+          "four five five"
+          "six  five five"
+          "seven five five"
+          "one one one";
+        gap: 20px;
+      }
+      .grid2 div {
+        background-color: #03a9f4;
+        color: white;
+        font-weight: bold;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .one {
+        grid-area: one;
+      }
+      .two {
+        grid-area: two;
+      }
+      .three {
+        grid-area: three;
+      }
+      .four {
+        grid-area: four;
+      }
+      .five {
+        grid-area: five;
+      }
+      .six {
+        grid-area: six;
+      }
+      .seven {
+        grid-area: seven;
+      }
+      .eight {
+        grid-area: eight;
+      }
+
+      /* Task 5 */
+
+      .grid3 {
+        background-color: #ddd;
+        padding: 20px;
+        width: 800px;
+        height: 400px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20px 20px;
+        gap: 380px 20px;
+      }
+      .grid3 div {
+        color: white;
+        text-align: center;
+        background-color: #e91e63;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="layout">
+      <header></header>
+      <section></section>
+      <aside></aside>
+      <footer></footer>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="grid2">
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+      <div class="four">4</div>
+      <div class="five">5</div>
+      <div class="six">6</div>
+      <div class="seven">7</div>
+      <div class="eight">8</div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="grid3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>
