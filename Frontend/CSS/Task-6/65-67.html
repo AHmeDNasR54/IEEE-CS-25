@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex box tasks</title>
+    <link rel="stylesheet" href="02.css" />
+
+    <style>
+      .task02,
+      .task03 {
+        width: 200px;
+        height: 200px;
+        margin: 30px auto;
+        border-radius: 50%;
+        background-color: #ddd;
+
+        font-size: 40px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: 0.5s;
+      }
+      .task02::before,
+      .task03::before {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+        background-image: linear-gradient(
+          to right,
+          #fafafa 20%,
+          #e91e63 20%,
+          #e91e63 100%
+        );
+        z-index: -1;
+        transform: scale(1.1, 1.1);
+      }
+      .task02::after,
+      .task03::after {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+        background-image: linear-gradient(
+          to right,
+          #23b0f3 75%,
+          transparent 75%,
+          transparent 75%
+        );
+        z-index: -2;
+        transform: scale(1.22, 1.22);
+      }
+      .task03:hover::before {
+        transform: rotate(180deg);
+      }
+      .task03:hover::after {
+        transform: rotate(-180deg);
+      }
+      .task03 {
+        width: 200px;
+        height: 200px;
+        background-color: #eee;
+        text-align: center;
+        font-size: 30px;
+        line-height: 6.5;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: -3px solid #ccc;
+        border-radius: 50%;
+        position: relative;
+      }
+      .task03::before {
+        content: "";
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: absolute;
+        left: -9px;
+        top: -10px;
+        z-index: -2;
+        border-right: 10px solid #ff0066;
+        border-top: 10px solid #ff0066;
+        border-bottom: 10px solid #ff0066;
+        border-left: 10px solid #fff;
+        transition: 0.5s;
+      }
+      .task03::after {
+        content: "";
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        position: absolute;
+        left: -18px;
+        top: -20px;
+        z-index: -3;
+        border-left: 10px solid #2196f3;
+        border-top: 10px solid #2196f3;
+        border-bottom: 10px solid #2196f3;
+        border-right: 10px solid #fff;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="task02">Elzero</div>
+    <br />
+    <hr />
+    <br />
+    <div class="task03">Elzero</div>
+  </body>
+</html>
