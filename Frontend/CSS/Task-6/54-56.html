@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex box tasks</title>
+    <link rel="stylesheet" href="02.css" />
+
+    <style>
+      .task01 div {
+        width: 600px;
+        padding: 50px;
+        margin: 50px auto;
+        background-color: #ddd;
+        text-align: center;
+        position: relative;
+        border-left: 10px solid red;
+        border-right: 10px solid #6234b4;
+        font-weight: bold;
+        font-size: 40px;
+      }
+      .task01 div::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 10px;
+        width: 100%;
+        background-image: linear-gradient(
+          to right,
+          red 0%,
+          red 20%,
+          #62b1f1 20%,
+          #62b1f1 40%,
+          #45ab49 40%,
+          #45ab49 60%,
+          #e8155c 60%,
+          #e8155c 80%,
+          #6234b4 80%,
+          #6234b4 100%
+        );
+      }
+      .task01 div::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 10px;
+        width: 100%;
+        background-image: linear-gradient(
+          to right,
+          red 0%,
+          red 20%,
+          #62b1f1 20%,
+          #62b1f1 40%,
+          #45ab49 40%,
+          #45ab49 60%,
+          #e8155c 60%,
+          #e8155c 80%,
+          #6234b4 80%,
+          #6234b4 100%
+        );
+      }
+      .task01 div::first-letter {
+        color: orangered;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="task01">
+      <div>Elzero</div>
+    </div>
+  </body>
+</html>
