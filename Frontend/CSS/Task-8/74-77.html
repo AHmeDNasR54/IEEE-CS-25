@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .Task01 {
+        width: 50px;
+        height: 50px;
+        margin: 100px auto;
+        border-radius: 50%;
+        border: 5px solid #fc2455;
+        border-top: 5px solid transparent;
+        position: relative;
+      }
+      .Task01::before {
+        content: "";
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 5px solid #2490ff;
+        border-right: 5px solid transparent;
+        position: absolute;
+        top: -30%;
+        left: -30%;
+      }
+      .Task01::after {
+        content: "";
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        top: -30%;
+        left: -30%;
+        border: 5px solid #fcb400;
+        border-left: 5px solid transparent;
+        position: absolute;
+        top: -50%;
+        left: -50%;
+      }
+      .Task01,
+      .Task01::before,
+      .Task01::after {
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+        -webkit-animation-timing-function: linear;
+      }
+      .Task01:hover,
+      .Task01:hover::before,
+      .Task01:hover::after {
+        animation-play-state: paused;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* task 02 */
+      .Task02 {
+        width: 50px;
+        height: 50px;
+        margin: 50px auto;
+        border: 5px solid #2490ff;
+        border-bottom: 5px solid transparent;
+        border-radius: 50%;
+        position: relative;
+      }
+      .Task02::before {
+        content: "";
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 5px solid #fcb400;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: -30%;
+        left: -30%;
+      }
+      .Task02::after {
+        content: "";
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        top: -30%;
+        left: -30%;
+        border: 5px solid #000;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: -50%;
+        left: -50%;
+      }
+      .Task02,
+      .Task02::before,
+      .Task02::after {
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+        -webkit-animation-timing-function: linear;
+        animation-play-state: paused;
+      }
+      .Task02:hover,
+      .Task02:hover::before,
+      .Task02:hover::after {
+        animation-play-state: running;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Task01"></div>
+    <hr />
+    <br />
+    <div class="Task02"></div>
+  </body>
+</html>
